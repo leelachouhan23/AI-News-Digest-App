@@ -6,8 +6,7 @@ import DigestResult from "./components/DigestResult.jsx";
 import Footer from "./components/Footer.jsx";
 import "./styles/App.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "";
-
+const API_URL = "https://ai-news-digest-app.onrender.com";
 export default function App() {
   // Separate useState for each concern — mandatory requirement
   const [article, setArticle] = useState("");
@@ -37,11 +36,11 @@ export default function App() {
     setResult(null);
 
     try {
-      const res = await fetch(`${API_URL}/api/digest`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ article, mode }),
-      });
+        const res = await fetch(`${API_URL}/api/digest`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ article, mode }),
+    });
 
       const data = await res.json();
 
