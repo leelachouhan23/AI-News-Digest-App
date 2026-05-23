@@ -1,0 +1,33 @@
+.footer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.footer-rule {
+  height: 3px;
+  background: var(--ink-dark);
+  margin-bottom: 0.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-Dark);
+  padding: 0.3rem 0;
+}
+
+.footer-mid { color: var(--ink-dark); }
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    align-items: center;
+  }
+}

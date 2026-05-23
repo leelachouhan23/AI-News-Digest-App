@@ -1,0 +1,79 @@
+.mode-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mode-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dark);
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.mode-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.4rem;
+  border: 1px solid var(--ink-faint);
+  background: var(--paper-white);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mode-btn:hover:not(:disabled) {
+  border-color: var(--ink-mid);
+  background: var(--paper-bg);
+}
+
+.mode-btn.active {
+  background: var(--ink-dark);
+  border-color: var(--ink-dark);
+}
+
+.mode-btn.active .mode-icon,
+.mode-btn.active .mode-name,
+.mode-btn.active .mode-desc {
+  color: var(--paper-white);
+}
+
+.mode-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mode-icon {
+  font-size: 1.1rem;
+  color: var(--ink-mid);
+  line-height: 1;
+}
+
+.mode-name {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dark);
+}
+
+.mode-desc {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  color: var(--ink-light);
+}
+
+@media (max-width: 500px) {
+  .mode-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

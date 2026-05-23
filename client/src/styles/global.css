@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --paper-bg:    #18d8a8;
+  --paper-white: #faf8f4;
+  --ink-dark:    #1a1611;
+  --ink-mid:     #4a4540;
+  --ink-light:   #8a8480;
+  --ink-faint:   #ccc9c0;
+  --accent:      #8b1a1a;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--paper-bg);
+  color: var(--ink-dark);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+button { font-family: inherit; }
+textarea { font-family: inherit; }
+
+::selection {
+  background: var(--ink-dark);
+  color: var(--paper-white);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--paper-bg); }
+::-webkit-scrollbar-thumb { background: var(--ink-faint); }
