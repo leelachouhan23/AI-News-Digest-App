@@ -6,7 +6,7 @@ import DigestResult from "./components/DigestResult.jsx";
 import Footer from "./components/Footer.jsx";
 import "./styles/App.css";
 
-const API_URL = "https://ai-news-digest-app.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL || "";
 export default function App() {
   // Separate useState for each concern — mandatory requirement
   const [article, setArticle] = useState("");
