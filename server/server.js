@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
   if (!process.env.GROQ_API_KEY) {
     console.warn("⚠️  GROQ_API_KEY is not set — add it to server/.env");
   }
